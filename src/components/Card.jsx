@@ -23,7 +23,14 @@ export default function Card({ title, release_date, type, age_rating, image, tra
       <button onClick={handleBookmark}>{bookmarks.find((item) => item === title) ? <BookmarkAddedSvg /> : <BookmarkSvg />}</button>
 
       <div className="recommended-card-data" onClick={() => window.open(trailer, '_blank')}>
-        <img src={image} alt="" />
+        <img
+          src={image.startsWith("/") ? image : `/${image}`}
+          alt={title}
+          loading="eager"
+          width="300"
+          height="169"
+        />
+
 
         <div className="recommended-card-content">
           <p className="recommended-card-info">{new Date(release_date).getFullYear()}
