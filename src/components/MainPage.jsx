@@ -2,14 +2,25 @@ import { useContext, useState } from "react"
 import { DataContext } from "../App"
 import { BookmarkSvg, DotSvg, MovieSvg, SeriesSvg, BookmarkAddedSvg } from "../Svg";
 import Card from "./Card";
+import { Bookmarks } from "../App";
 
-export default function MainPage() {
+export default function MainPage({ title }) {
 
   const { data, setData } = useContext(DataContext);
   const [searchedText, setSearchedText] = useState('');
   console.log(searchedText)
   const filteredTrending = data.filter(x => x.trending)
   // console.log(data)
+
+  const { bookmarks, setBookmarks } = useContext(Bookmarks);
+
+  function handleBookmark(clickedTitle) {
+    if (bookmarks.includes(clickedTitle)) {
+      setBookmarks(bookmarks.filter((item) => item !== clickedTitle));
+    } else {
+      setBookmarks([...bookmarks, clickedTitle]);
+    }
+  }
   return (
     <main>
       <section className="search-section">
@@ -23,7 +34,10 @@ export default function MainPage() {
         <div className="trending-card-items">
           {filteredTrending.map((x, i) => (
             <div key={i} className="trending-card-item">
-              <button><BookmarkSvg /></button>
+              <button onClick={() => handleBookmark(x.title)}>
+                {bookmarks.includes(x.title) ? <BookmarkAddedSvg /> : <BookmarkSvg />}
+              </button>
+
 
               <div className="trending-card-data" onClick={() => window.open(x.trailer, '_blank')}>
                 <img src={x.image} alt="" />

@@ -33,6 +33,14 @@ header {
         }
       }
 
+      &:hover {
+        a {
+          svg {
+            fill: #FC4747;
+          }
+        }
+      }
+
       &.active {
         a {
           svg {
@@ -62,7 +70,14 @@ main {
   background-color: transparent;
   outline: none;
   color: #fff;
+  caret-color: red;
+  /* caret rengini kırmızı yapar */
+  font-size: 24px;
+  /* yazıyı büyütür, caret de büyür */
+  line-height: 30px;
+  /* yazı satır yüksekliği */
 }
+
 
 
 .trending-card-items {
@@ -77,6 +92,8 @@ main {
   position: relative;
 }
 
+
+
 .trending-card-item button {
   background-color: rgba(16, 20, 30, 0.5);
   border: none;
@@ -86,6 +103,7 @@ main {
   position: absolute;
   top: 8px;
   right: 8px;
+  z-index: 999;
 
   svg {
     fill: #fff;
@@ -102,6 +120,15 @@ main {
   max-height: 140px;
   object-fit: cover;
   opacity: 0.8;
+}
+
+.trending-card-data:hover {
+  background: url("/img/reco-item-hover-icon.svg") center no-repeat;
+
+  img {
+    opacity: 0.5;
+
+  }
 }
 
 .trending-card-text {
@@ -133,7 +160,10 @@ main {
   position: relative;
   width: 164px;
   cursor: pointer;
+
 }
+
+.recommended-card-item:hover {}
 
 .recommended-card-item button {
   background-color: rgba(16, 20, 30, 0.5);
@@ -144,11 +174,22 @@ main {
   position: absolute;
   top: 8px;
   right: 8px;
+  z-index: 999;
 
   svg {
     fill: #fff;
   }
 }
+
+.recommended-card-data-image:hover {
+  background: url("/img/reco-item-hover-icon.svg") center center no-repeat;
+
+  img {
+    opacity: 0.5;
+
+  }
+}
+
 
 .recommended-card-data img {
   margin-bottom: 8px;
@@ -220,6 +261,21 @@ main {
   header {
     margin: 23px 25px;
     border-radius: 10px;
+
+    ul {
+      gap: 32px;
+
+      li {
+        a {
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+
+        }
+      }
+    }
+
   }
 
   .recommended-card-items {
@@ -291,6 +347,7 @@ main {
       display: flex;
       flex-direction: column;
       margin-bottom: auto;
+      gap: 40px;
     }
   }
 
@@ -300,6 +357,7 @@ main {
     overflow-x: hidden;
     padding: 0;
     padding-top: 64px;
+    padding-bottom: 52px;
   }
 
   .trending-card-items {
@@ -319,6 +377,7 @@ main {
     background: #888;
     border-radius: 10px;
   }
+
 
   .trending-card-data img {
     min-width: 470px;
