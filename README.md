@@ -27,16 +27,28 @@ Modern tasarımı ve dinamik filtreleme sistemi ile kullanıcı deneyimini ön p
 - **Movies**, **TV Series**, **Bookmarked** gibi sekmelerle içerikler filtrelenebilir.
 - Her içerik kartında tür, yılı, başlık ve simgelerle kısa bilgi yer alır.
 
+ 
+![image](https://github.com/user-attachments/assets/2baff2a8-3a78-400f-9071-8e9184164695)
+ 
+
 ###  Gerçek Zamanlı Arama
 
 - Başlık bazlı arama yapılabilir.
 - Arama sonuçları anlık olarak filtrelenerek listelenir.
+
+
+![image](https://github.com/user-attachments/assets/27d302d4-3a20-4705-96ca-d4856aae2117)
+
 
 ###  Favorilere Ekleme
 
 - Her içerik için "bookmark" ikonu yer alır.
 - Bu ikona tıklayarak içerikler favorilere eklenebilir veya çıkarılabilir.
 - "Bookmarked" sekmesinde yalnızca favorilere eklenen içerikler listelenir.
+
+
+![image](https://github.com/user-attachments/assets/eade72e8-5d11-4e5e-94a0-a8106a7e2c63)
+
 
 ###  Tema
 
