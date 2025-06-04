@@ -75,7 +75,7 @@ Modern tasarımı ve dinamik filtreleme sistemi ile kullanıcı deneyimini ön p
 ### 1. Depoyu Klonla
 
 ```bash
-git clone https://github.com/kullanici-adi/entertainment-app-react.git
+git clone https://github.com/omer-kuluc/entertainment-app-react.git
 ```
 
 ### 2. Dizin Değiştir
